@@ -3,6 +3,13 @@ window.addEventListener('load', () =>{
     getUsers();
 })
 
+const connection = mysql.createConnection({
+host: 'b1ngrtg38yqpimhfnzng-mysql.services.clever-cloud.com',
+user: 'usn7re96znnudq3t',
+password: 'LAqM6I3tNG9tVVejXEKv',
+database: 'b1ngrtg38yqpimhfnzng'
+})
+
 function getUsers(){
     let html=""
     fetch('http://localhost:5000/api/members',{mode:'cors'})
